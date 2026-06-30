@@ -13,6 +13,10 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    new ContextReplacementPlugin(
+      /date-fns[\/\\]locale/,
+      new RegExp([/en-US/, /es/, /fr/].map(l => l.source).join('|'))
+    )
   ],
   module: {
     rules: [
