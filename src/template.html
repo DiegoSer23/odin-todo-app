@@ -25,6 +25,18 @@
         </div>
     </div>
     <div id="content">
+        <form id="add-project-form" class="hidden-form">
+            <input type="text" name="project-name" placeholder="Project Name" required>
+            <input type="text" name="todo-name" placeholder="First To Do" required>
+            <input type="text" name="todo-description" placeholder="To Do description" required>
+            <input type="date" name="todo-duedate" placeholder="Due Date" required>
+            <select name="todo-priority" id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Project</button>
+        </form>
         <div class="project-display">
             <label class="project-label">Default Project</label>
             <div class="todo-item">
