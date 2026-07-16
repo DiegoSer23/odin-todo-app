@@ -1,4 +1,4 @@
-import { Todo } from "./todos";
+import { Todo } from "./todos.js";
 
 class Project {
     constructor(name, todos) {
@@ -16,12 +16,6 @@ class Project {
     }
 }
 
-/*document.getElementById("add-project-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    //Show message and close form DOM
-});*/
-
 function addNewProject(submittedForm) {
     const formData = new FormData(submittedForm);
     const todoName = formData.get("todo-name");
@@ -35,10 +29,6 @@ function addNewProject(submittedForm) {
     localStorage.setItem(`project-${projectId}`, JSON.stringify(newProject));
 }
 
-/*document.getElementById("CurrentProjectsBtn").addEventListener("click", function(event) {
-    
-});*/
-
 function displayProjects() {
     const keys = Object.keys(localStorage);
     for (const key of keys) {
@@ -46,13 +36,6 @@ function displayProjects() {
         //display projects elements
     }
 }
-
-document.getElementById("btn-add-todo-project").addEventListener("click", function(event) {
-    const parentProject = event.currentTarget.parentElement;
-    const parentID = parentProject.id;
-    const project = JSON.parse(localStorage.getItem(parentID));
-    //refresh DOM elements add todo
-});
 
 function addTodoProject(parentProject, projectId, todoForm) {
     const formData = new FormData(todoForm);

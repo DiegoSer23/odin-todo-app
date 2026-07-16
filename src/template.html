@@ -7,46 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="sidebar">
-        <div class="sidebar-item">
-            <button id="AddProjectBtn"></button>
-            <h3>Add Project</h3>
+    <div id="main-container">
+        <div id="sidebar">
+            <div class="sidebar-item">
+                <button id="AddProjectBtn">Add Project</button>
+            </div>
+            <div class="sidebar-item">
+                <button id="CurrentProjectsBtn">Current Projects</button>
+            </div>
+            <div class="sidebar-item">
+                <button class="project-btn">Default Project</button>
+            </div>
         </div>
-        <div class="sidebar-item">
-            <button id="CurrentProjectsBtn"></button>
-            <h3>Today Projects</h3>
-        </div>
-        <div class="sidebar-item">
-            <button class="project-btn">Default Project</button>
-        </div>
-    </div>
-    <div id="content">
-        <form id="add-project-form" class="hidden-form">
-            <input type="text" name="project-name" placeholder="Project Name" required>
-            <input type="text" name="todo-name" placeholder="First To Do" required>
-            <input type="text" name="todo-description" placeholder="To Do description" required>
-            <input type="date" name="todo-duedate" placeholder="Due Date" required>
-            <select name="todo-priority" id="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-            <button type="submit">Add Project</button>
-        </form>
-        <div class="project-display">
-            <div class="project-container" id="project-1">
-                <label class="project-label">Default Project</label>
-                <button id="btn-add-todo-project">Add To Do</button>
-                <div class="todo-item">
-                    <input type="checkbox" name="done-item" value="done">
-                    <label class="todo-title">Add to do task</label>
-                    <button class="expand-todo"></button>
-                    <div class="todo-details">
-                        <label class="todo-item-description">Study Fullstack</label>
-                        <label class="todo-item-dueDate">20/11/1997</label>
-                        <label class="todo-item-priority">Medium</label>
+        <div id="content">
+            <form id="add-project-form" class="hidden-form">
+                <input type="text" name="project-name" placeholder="Project Name" required>
+                <input type="text" name="todo-name" placeholder="First To Do" required>
+                <input type="text" name="todo-description" placeholder="To Do description" required>
+                <input type="date" name="todo-duedate" placeholder="Due Date" required>
+                <select name="todo-priority" id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add Project</button>
+            </form>
+            <form id="add-todo-form" class="hidden-form">
+                <input type="text" name="todo-name" placeholder="First To Do" required>
+                <input type="text" name="todo-description" placeholder="To Do description" required>
+                <input type="date" name="todo-duedate" placeholder="Due Date" required>
+                <select name="todo-priority" id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add Todo</button>
+            </form>
+            <div class="project-display">
+                <div class="project-container" id="project-1">
+                    <label class="project-label">Default Project</label>
+                    <button id="btn-add-todo-project">Add To Do</button>
+                    <div class="todo-item">
+                        <input type="checkbox" name="done-item" value="done">
+                        <label class="todo-title">Add to do task</label>
+                        <button class="expand-todo"></button>
+                        <div class="todo-details">
+                            <label class="todo-item-description">Study Fullstack</label>
+                            <label class="todo-item-dueDate">20/11/1997</label>
+                            <label class="todo-item-priority">Medium</label>
+                        </div>
+                        <button id="delete-todo">Delete To Do</button>
                     </div>
-                    <button id="delete-todo">Delete To Do</button>
                 </div>
             </div>
         </div>
